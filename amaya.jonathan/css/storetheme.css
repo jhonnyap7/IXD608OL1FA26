@@ -1,0 +1,28 @@
+
+
+.navbar {
+    background-color: #1f1f1f;
+}
+
+.navbar h1 {
+    letter-spacing: 0.18em;
+}
+
+.view-window {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.card {
+    border-radius: 0;
+}
+
+.card.soft {
+    box-shadow: none;
+}
+
+body {
+    background-color: #f4f4f4;
+}
