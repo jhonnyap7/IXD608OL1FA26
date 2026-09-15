@@ -1,3 +1,3 @@
 # Jonathan Amaya
 
-https://jonathan-amaya07.com
+http://jonathan-amaya07.com
