@@ -6,20 +6,20 @@
 }
 
 :root {
-	--color-neutral-light:#eee;
-	--color-neutral-medium:#999;
-	--color-neutral-dark:#555;
+    --color-neutral-light:#F4EFE7;
+    --color-neutral-medium:#D5C2AA;
+    --color-neutral-dark:#24211D;
 
-	--color-black:#000;
-	--color-white:#fff;
-
+    --color-black:#24211D;
+    --color-white:#F4EFE7;
+    --color-brown:#78604C;
 
 	--header-height:3rem;
 	--spacing:1rem;
 
 
-	--font-serif: canela, helvetica, futura, serif;
-	--font-sans: futura, sans-serif;
+	--font-serif: "Canela", "Adobe Garamond Pro", Georgia, serif;
+	--font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -37,6 +37,30 @@ h5,
 h6 {
 	font-family: var(--font-serif);
 }
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.35rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 0.9rem;
+}
+
 
 a {
 	color:inherit;
@@ -71,6 +95,21 @@ a:hover {
 
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
+
+
+
+
+
+/* small classes */
+
+.media-image {
+	max-width:100%;
+	vertical-align: text-bottom;
+}
+
+
+
+
 
 
 
@@ -143,3 +182,232 @@ a:hover {
 	background-position:center;
 	background-attachment:fixed;
 }
+
+/* SOPHEA COLOR PALETTE */
+
+.color-swatch {
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-sans);
+}
+
+.color-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.color-cream {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-neutral-medium);
+}
+
+.color-brown {
+    background-color: var(--color-brown);
+    color: var(--color-white);
+}
+
+/* NAVIGATION STYLES */
+
+.nav-flex ul {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-flex li {
+    list-style: none;
+}
+
+.nav-flex ul {
+    padding-left: 0;
+}
+
+.nav-stretch ul {
+    display: flex;
+    padding-left: 0;
+}
+
+.nav-stretch li {
+    list-style: none;
+    flex: 1;
+    text-align: center;
+}
+
+/* SOPHEA Style Guide Introduction */
+
+.brand-intro {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 24px 60px;
+    text-align: center;
+}
+
+.brand-name {
+    margin: 0 0 24px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+.brand-intro h1 {
+    margin: 0;
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.brand-tagline {
+    margin: 24px 0 0;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: #78604C;
+}
+
+#headings h6 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* SOPHEA COLOR PALETTE */
+
+.color-swatch {
+    min-height: 220px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 2px;
+}
+
+.color-swatch strong {
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    margin-bottom: 8px;
+}
+
+.color-swatch span {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+}
+
+.color-swatch small {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+}
+
+/* Primary */
+.color-black {
+    background-color: #24211D;
+    color: #F4EFE7;
+}
+
+/* Background */
+.color-cream {
+    background-color: #F4EFE7;
+    color: #24211D;
+    border: 1px solid #DED6CC;
+}
+
+/* Accent */
+.color-brown {
+    background-color: #78604C;
+    color: #F4EFE7;
+}
+
+/* SOPHEA CARD COMPONENTS */
+
+#cards .grid {
+    align-items: stretch;
+}
+
+#cards .card {
+    min-height: 150px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#cards .card small {
+    display: block;
+    margin-bottom: 18px;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+#cards .card h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+#cards .card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+#cards .card.dark small,
+#cards .card.dark h3,
+#cards .card.dark p {
+    color: #F4EFE7;
+}
+
+#cards .card.medium {
+    background-color: #D5C2AA;
+}
+
+/* SOPHEA VIEW WINDOW */
+
+.view-window {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 620px;
+    padding: 48px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.view-window-content {
+    position: relative;
+    max-width: 360px;
+    padding: 28px 32px;
+    background: rgba(36, 33, 29, 0.88);
+    color: #F4EFE7;
+}
+
+.view-window-content small {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+}
+
+.view-window-content h2 {
+    margin: 0 0 8px;
+    color: #F4EFE7;
+}
+
+.view-window-content p {
+    margin: 0 0 22px;
+    font-size: 14px;
+}
+
+.view-window-content a {
+    color: #F4EFE7;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+

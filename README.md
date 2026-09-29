@@ -1,1 +1,9 @@
-IXD 608 OL1 Fall 2026 Repo
+# Jonathan Amaya
+
+http://jonathan-amaya07.com
+
+## Style Guide
+
+http://jonathan-amaya07.com/IXD608OL1FA26/amaya.jonathan/styleguide/
+
+
