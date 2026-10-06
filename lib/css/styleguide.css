@@ -27,6 +27,8 @@ body {
 	margin:0;
 	font-size:100%;
 	font-family:var(--font-sans);
+    background-color: var(--color-neutral-light);
+    padding-bottom: 4em; 
 }
 
 h1,
@@ -38,11 +40,11 @@ h6 {
 	font-family: var(--font-serif);
 }
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2.25rem;
+    font-size: 1.9rem;
 }
 
 h3 {
@@ -78,7 +80,7 @@ a:hover {
  /* LAYOUT CLASSES */
 
  .container {
- 	max-width: 1200px;
+ 	max-width: 1100px;
  	margin-right: auto;
  	margin-left: auto;
  }
@@ -141,17 +143,18 @@ a:hover {
 
 .card {
 	background-color:var(--color-white);
-	margin-top:1em;
-	margin-bottom:1em;
-	padding:1em;
+	margin-top:2em;
+	margin-bottom:2em;
+	padding:2em;
 
 	overflow:hidden;
 	position:relative;
 	}
 	.card.soft {
-		border-radius:0.5em;
-		box-shadow: 0 0 10px rgba(0,0,0,0.1);
-	}	
+    border-radius: 2px;
+    box-shadow: none;
+    border: 1px solid #DED6CC;
+    }	
 	.card.hard {
 		border-radius:0.2em;
 		border:2px solid var(--color-neutral-medium);
@@ -411,3 +414,216 @@ a:hover {
     text-transform: uppercase;
 }
 
+
+
+/* FORMS */
+
+.form-input {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0.2em 0.5em;
+    font: inherit;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    border-bottom: 1px solid #3A352F;
+    outline: 0;
+}
+
+.form-input:focus {
+    border-bottom-color: #000000;
+
+}
+
+.form-label {
+    font-size: 0.8em;
+    color: #3A352F;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.form-control {
+    margin: 1em 0;
+}
+
+button {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.2em 0.6em;
+}
+
+
+.form-button {
+    display: inline-block;
+    background-color: #D5C2AA;
+    border-width: 0;
+    padding: 0.5em 1em;
+    color: #FFFFFF;
+    -webkit-appearance: none;
+    color: inherit;
+    width: 100%;
+    outline: 0;
+    border-radius: 0.2em;
+    cursor:pointer;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.form-button:hover {
+    text-decoration: none;
+}
+
+
+.form-button:active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* HOTDOG */
+
+.hotdog {
+    display: block;
+    width: 100%;
+    padding: 0.6em 1em;
+    border: 1px solid #3A352F;
+    border-radius: 2em;
+    background-color: transparent;
+    color: #3A352F;
+    font: inherit;
+    outline: 0;
+}
+.hotdog-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+    cursor: pointer;
+}
+
+.hotdog-box {
+    background-color: #3A352F;
+    padding: 0.6em;
+}
+
+.hotdog-inner {
+    background-color: #F4EFE7;
+    border-color: #F4EFE7;
+    color: #3A352F;
+}
+
+/* CHECKBOXES */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    color: #3A352F;
+    cursor: pointer;
+}
+
+.checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: #000000;
+    cursor: pointer;
+}
+
+/* FORM VARIATIONS */
+
+.form-warning .form-input {
+    border-bottom-color: #9A6B3F;
+}
+
+.form-warning small {
+    display: block;
+    margin-top: 0.4em;
+    color: #9A6B3F;
+    font-size: 0.75em;
+}
+
+.form-alert .form-input {
+    border-bottom-color: #8B2E2E;
+}
+
+.form-alert small {
+    display: block;
+    margin-top: 0.4em;
+    color: #8B2E2E;
+    font-size: 0.75em;
+}
+
+.money-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.money-input span {
+    color: #3A352F;
+    font-size: 1em;
+}
+
+.money-input .form-input {
+    flex: 1;
+}
+
+.form-hero {
+    background-color: #3A352F;
+    padding: 2em;
+}
+
+.form-hero .form-label {
+    color: #F4EFE7;
+}
+
+.form-hero .form-input {
+    color: #F4EFE7;
+    border-bottom-color: #F4EFE7;
+    margin-bottom: 1em;
+}
+
+.form-hero .form-input::placeholder {
+    color: #D5C2AA;
+}
+
+.form-hero .form-button {
+    background-color: #F4EFE7;
+    color: #3A352F;
+}
+
+
+/* FIGURES */
+
+.basic-figure,
+.grid-figure {
+    margin: 0;
+}
+
+.basic-figure img,
+.grid-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.basic-figure figcaption,
+.grid-figure figcaption {
+    padding: 1em 0;
+    font-size: 0.8em;
+    letter-spacing: 0.08em;
+}
+
+.figure-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.grid-figure img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}

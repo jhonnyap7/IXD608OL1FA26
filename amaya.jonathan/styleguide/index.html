@@ -61,7 +61,14 @@
             <li><a href="#navigations">Navigations</a></li>
             <li><a href="#gridsystem">Grid System</a></li>
             <li><a href="#flexsystem">Flex System</a></li>
-        </ul>
+            <li><a href="#forms">Forms</a></li>
+            <ul>
+            <li><a href="#inputs">Inputs</a></li>
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#hotdog">Hotdog</a></li>
+            <li><a href="#figures">Figures</a></li>
+            </ul>
+        </li>
     </nav>
 </div>
 
@@ -319,6 +326,206 @@
     </div>
 </div>
 
+
+<div class="container" id="forms">
+    <h2>Forms</h2>
+
+    <h3>Inputs</h3>
+
+    <div class="card soft">
+        <h3>Default Inputs</h3>
+
+        <form>
+            <input type="text"><br>
+            <input type="number"><br>
+            <input type="password"><br>
+            <input type="url"><br>
+            <input type="email"><br>
+            <input type="datetime-local"><br>
+            <input type="date"><br>
+            <input type="search">
+        </form>
+
+        <h3>Form Input</h3>
+
+    <form>
+        <input type="text" placeholder="Text" class="form-input">
+        <input type="number" placeholder="Number" class="form-input"><br>
+        <input type="password" placeholder="Password" class="form-input"><br>
+        <input type="search" placeholder="Search" class="form-input">
+    </form>
+
+    <h3>Form Label</h3>
+
+<form>
+    <label class="form-label">Example</label>
+    <input type="text" placeholder="Text" class="form-input">
+
+    <label class="form-label">Example</label>
+    <input type="number" placeholder="Number" class="form-input">
+
+    <label class="form-label">Example</label>
+    <input type="password" placeholder="Password" class="form-input">
+
+    <label class="form-label">Example</label>
+    <input type="search" placeholder="Search" class="form-input">
+</form>
+<h3>Form Control</h3>
+
+<form>
+    <div class="form-control">
+        <label class="form-label">Example</label>
+        <input type="text" placeholder="Text" class="form-input">
+    </div>
+
+    <div class="form-control">
+        <label class="form-label">Example</label>
+        <input type="number" placeholder="Number" class="form-input">
+    </div>
+
+    <div class="form-control">
+        <label class="form-label">Example</label>
+        <input type="password" placeholder="Password" class="form-input">
+    </div>
+
+    <div class="form-control">
+        <label class="form-label">Example</label>
+        <input type="search" placeholder="Search" class="form-input">
+    </div>
+</form>    
+    </div>
+</div>
+<h3>Buttons</h3>
+
+<div class="card soft">
+        <h3>Default Buttons</h3>
+    <button>Button</button>
+        <h3>Form Buttons</h3>
+    <div class="form-control">
+        <button type="button" class="form-button">Button</button>
+    </div>
+
+    <div class="form-control">
+        <input type="button" class="form-button" value="Input">
+    </div>
+
+<div class="form-control">
+    <a href="#" class="form-button">Anchor</a>
+</div>
+</div>
+
+<h3>Hotdog</h3>
+
+    <div class="card soft">
+    <div class="form-control">
+        <input type="search" class="hotdog" placeholder="Search">
+    </div>
+    <div class="form-control">
+        <input type="button" class="hotdog hotdog-dark" value="Search">
+    </div> 
+    <div class="form-control">
+    <div class="hotdog-box">
+        <input type="search" class="hotdog hotdog-inner" placeholder="Search">
+    </div>
+    <div class="form-control">
+    <div class="hotdog-icon">
+        <span>☰</span>
+        <input type="search" placeholder="Search">
+    </div>
+</div>
+
+<h3>Checkboxes</h3>
+
+<div class="card soft">
+    <div class="form-control">
+        <label class="checkbox">
+            <input type="checkbox">
+            <span>Subscribe to updates</span>
+        </label>
+    </div>
+</div>
+
+<h3>Form Variations</h3>
+
+<div class="card soft">
+    <h4>Basic</h4>
+
+    <div class="form-control">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" placeholder="Email address">
+    </div>
+
+    <div class="form-control">
+        <button type="button" class="form-button">Submit</button>
+    </div>
+</div>
+</div> 
+<h4>Warning</h4>
+
+<div class="form-control form-warning">
+    <label class="form-label">Email Address</label>
+    <input type="email" class="form-input" placeholder="Email address">
+    <small>Please enter a valid email address.</small>
+</div>
+</div>
+<h4>Alert</h4>
+
+<div class="form-control form-alert">
+    <label class="form-label">Email Address</label>
+    <input type="email" class="form-input" placeholder="Email address">
+    <small>This field is required.</small>
+</div>
+<h4>Money</h4>
+
+<div class="form-control form-money">
+    <label class="form-label">Price</label>
+    <div class="money-input">
+        <span>$</span>
+        <input type="number" class="form-input" placeholder="0.00">
+    </div>
+</div>
+
+<h4>Hero</h4>
+
+<div class="form-control form-hero">
+    <label class="form-label">Join the SOPHEA List</label>
+    <input type="email" class="form-input" placeholder="Email address">
+    <button type="button" class="form-button">Subscribe</button>
+</div>
+
+<h3>Figures</h3>
+
+<div class="card soft">
+    <h4>Basic Figure</h4>
+
+    <figure class="basic-figure">
+        <img src="../../img/sophea-candles.jpg" alt="SOPHEA candle collection">
+        <figcaption>SOPHEA — The Signature Collection</figcaption>
+    </figure>
+</div>
+
+<h4>Figure Grid</h4>
+
+<div class="figure-grid">
+
+    <figure class="grid-figure">
+        <img src="../../img/sophea-current.png" alt="sophea-current">
+        <figcaption>CURRENT</figcaption>
+    </figure>
+
+    <figure class="grid-figure">
+        <img src="../../img/sophea-obsidian.png" alt="sophea-obsidian">
+        <figcaption>OBSIDIAN</figcaption>
+    </figure>
+
+    <figure class="grid-figure">
+        <img src="../../img/sophea-candles.png" alt="sophea-dune">
+        <figcaption>DUNE</figcaption>
+    </figure>
+
+</div>
+
 </body>
 
 </html>
+
