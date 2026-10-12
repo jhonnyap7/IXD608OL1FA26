@@ -2,39 +2,1135 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>CSS Styleguide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<meta name="viewport" content="width=device-width">
+    <title>SOPHEA — Digital Style Guide</title>
 
-	<link rel="stylesheet" href="../../lib/css/styleguide.css">
+    <!-- Shared coursework styles -->
+    <link rel="stylesheet" href="../../lib/css/styleguide.css">
     <link rel="stylesheet" href="../../lib/css/gridsystem.css">
+
+    <!-- SOPHEA custom styles -->
     <link rel="stylesheet" href="../css/storetheme.css">
 </head>
 
 <body>
 
-	<header class="navbar">
-		<div class="container display-flex">
+    <!-- ========================================
+         HEADER
+    ======================================== -->
 
-			<div class="flex-none">
-				<h1>Styleguide</h1>
-			</div>
+    <header class="navbar">
+        <div class="container display-flex">
 
-			<div class="flex-stretch"></div>
+            <div class="flex-none">
+                <h1>SOPHEA Style Guide</h1>
+            </div>
 
-			<nav class="flex-none nav">
-				<ul class="container display-flex">
-					<li>
-						<a href="#tableofcontents">Table of Contents</a>
-					</li>
-				</ul>
-			</nav>
+            <div class="flex-stretch"></div>
 
-		</div>
-	</header>
+            <nav class="flex-none nav" aria-label="Page navigation">
+                <ul class="display-flex">
+                    <li>
+                        <a href="#tableofcontents">Table of Contents</a>
+                    </li>
+                </ul>
+            </nav>
 
-<section class="brand-intro">
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ========================================
+             BRAND INTRODUCTION
+        ======================================== -->
+
+        <section class="brand-intro">
+
+            <p class="brand-name">SOPHEA</p>
+
+            <h1>Digital Style Guide</h1>
+
+            <p class="brand-tagline">
+                Spatial fragrance. Designed for stillness.
+            </p>
+
+        </section>
+
+
+        <!-- ========================================
+             TABLE OF CONTENTS
+        ======================================== -->
+
+        <section class="container" id="tableofcontents">
+
+            <h2>Table of Contents</h2>
+
+            <div class="card">
+
+                <nav class="nav" aria-label="Style guide contents">
+
+                    <ul>
+
+                        <li>
+                            <a href="#typography">Typography</a>
+
+                            <ul>
+                                <li><a href="#headings">Headings</a></li>
+                                <li><a href="#paragraphs">Paragraphs</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#cards">Cards</a></li>
+
+                        <li><a href="#colors">Colors</a></li>
+
+                        <li><a href="#navigations">Navigations</a></li>
+
+                        <li><a href="#viewwindow">View Window</a></li>
+
+                        <li><a href="#gridsystem">Grid System</a></li>
+
+                        <li><a href="#flexsystem">Flex System</a></li>
+
+                        <li>
+                            <a href="#forms">Forms</a>
+
+                            <ul>
+                                <li><a href="#inputs">Inputs</a></li>
+                                <li><a href="#buttons">Buttons</a></li>
+                                <li><a href="#hotdog">Hotdog</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#figures">Figures</a></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             TYPOGRAPHY
+        ======================================== -->
+
+        <section class="container" id="typography">
+
+            <h2>Typography</h2>
+
+            <div class="card soft" id="headings">
+
+                <h3>Headings</h3>
+
+                <h1>Spatial Fragrance</h1>
+
+                <h2>The Signature Collection</h2>
+
+                <h3>DUNE</h3>
+
+                <h4>Orris · Sandalwood · Musk</h4>
+
+                <h5>Designed for Stillness</h5>
+
+                <h6>SPATIAL FRAGRANCE.</h6>
+
+            </div>
+
+
+            <div class="card soft" id="paragraphs">
+
+                <h3>Paragraphs</h3>
+
+                <p>
+                    Sophea creates spatial fragrances designed to shape
+                    the atmosphere of a room. Each scent is composed
+                    to bring a sense of clarity, warmth, and intention
+                    into everyday spaces.
+                </p>
+
+                <p>
+                    Our collection explores fragrance through a quiet
+                    and architectural approach. From the brightness
+                    of CURRENT to the depth of OBSIDIAN and the warmth
+                    of DUNE, each candle creates a distinct mood while
+                    remaining part of one considered collection.
+                </p>
+
+                <p>
+                    Thoughtful materials, restrained design, and
+                    carefully selected fragrance notes define the
+                    SOPHEA experience. Every detail is intentional,
+                    creating objects that feel as considered in a
+                    space as the fragrance they release.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             CARDS
+        ======================================== -->
+
+        <section class="container" id="cards">
+
+            <h2>Cards</h2>
+
+            <div class="grid gap">
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="card">
+
+                        <small>THE SIGNATURE COLLECTION</small>
+
+                        <h3>CURRENT · OBSIDIAN · DUNE</h3>
+
+                        <p>Three fragrances. One considered collection.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="card soft">
+
+                        <small>THE SIGNATURE COLLECTION</small>
+
+                        <h3>CURRENT</h3>
+
+                        <p>White Tea · Jasmine · Musk</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="card hard">
+
+                        <small>THE SIGNATURE COLLECTION</small>
+
+                        <h3>OBSIDIAN</h3>
+
+                        <p>Black Sea · Sea Salt · Dark Musk</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="card flat">
+
+                        <small>THE SIGNATURE COLLECTION</small>
+
+                        <h3>DUNE</h3>
+
+                        <p>Orris · Sandalwood · Musk</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="card dark">
+
+                        <small>SPATIAL FRAGRANCE</small>
+
+                        <h3>Designed for Stillness</h3>
+
+                        <p>Fragrance created with space in mind.</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="card medium">
+
+                        <small>THE COLLECTION</small>
+
+                        <h3>More to Come</h3>
+
+                        <p>The SOPHEA collection continues to evolve.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             COLORS
+        ======================================== -->
+
+        <section class="container" id="colors">
+
+            <h2>Colors</h2>
+
+            <div class="grid gap">
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="color-swatch color-black">
+
+                        <strong>SOPHEA BLACK</strong>
+
+                        <span>#24211D</span>
+
+                        <small>Primary</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="color-swatch color-cream">
+
+                        <strong>SOPHEA CREAM</strong>
+
+                        <span>#F4EFE7</span>
+
+                        <small>Background</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-4">
+
+                    <div class="color-swatch color-brown">
+
+                        <strong>SOPHEA BROWN</strong>
+
+                        <span>#78604C</span>
+
+                        <small>Accent</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             NAVIGATION
+        ======================================== -->
+
+        <section class="container" id="navigations">
+
+            <h2>Navigations</h2>
+
+
+            <div class="card soft">
+
+                <h3>Basic Navigation</h3>
+
+                <nav class="nav" aria-label="Basic navigation example">
+
+                    <ul>
+                        <li><a href="#cards">Collection</a></li>
+                        <li><a href="#typography">Our Story</a></li>
+                        <li><a href="#figures">Journal</a></li>
+                        <li><a href="#forms">Contact</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+
+            <div class="card soft">
+
+                <h3>Flex Navigation</h3>
+
+                <nav class="nav nav-flex" aria-label="Flex navigation example">
+
+                    <ul>
+                        <li><a href="#cards">Collection</a></li>
+                        <li><a href="#typography">Our Story</a></li>
+                        <li><a href="#figures">Journal</a></li>
+                        <li><a href="#forms">Contact</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+
+            <div class="card soft">
+
+                <h3>Stretch Navigation</h3>
+
+                <nav class="nav nav-stretch" aria-label="Stretch navigation example">
+
+                    <ul>
+                        <li><a href="#cards">Collection</a></li>
+                        <li><a href="#typography">Our Story</a></li>
+                        <li><a href="#figures">Journal</a></li>
+                        <li><a href="#forms">Contact</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             VIEW WINDOW
+        ======================================== -->
+
+        <section class="container" id="viewwindow">
+
+            <h2>View Window</h2>
+
+            <div
+                class="view-window"
+                style="background-image: url('../../img/sophea-candles.jpg');"
+            >
+
+                <div class="view-window-content">
+
+                    <small>THE SIGNATURE COLLECTION</small>
+
+                    <h2>DUNE</h2>
+
+                    <p>Orris · Sandalwood · Musk</p>
+
+                    <a href="#figures">Explore →</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             GRID SYSTEM
+        ======================================== -->
+
+        <section class="container" id="gridsystem">
+
+            <h2>Grid System</h2>
+
+
+            <div class="grid gap">
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="card">6 / 12</div>
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="card">6 / 12</div>
+                </div>
+
+            </div>
+
+
+            <div class="grid gap">
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">4 / 12</div>
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">4 / 12</div>
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="card">4 / 12</div>
+                </div>
+
+            </div>
+
+
+            <div class="grid gap">
+
+                <div class="col-xs-12 col-md-3">
+                    <div class="card">3 / 12</div>
+                </div>
+
+                <div class="col-xs-12 col-md-3">
+                    <div class="card">3 / 12</div>
+                </div>
+
+                <div class="col-xs-12 col-md-3">
+                    <div class="card">3 / 12</div>
+                </div>
+
+                <div class="col-xs-12 col-md-3">
+                    <div class="card">3 / 12</div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             FLEX SYSTEM
+        ======================================== -->
+
+        <section class="container" id="flexsystem">
+
+            <h2>Flex System</h2>
+
+
+            <div class="card">
+
+                <h3>Flex</h3>
+
+                <div class="display-flex">
+
+                    <div class="card">CURRENT</div>
+
+                    <div class="card">OBSIDIAN</div>
+
+                    <div class="card">DUNE</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Flex Stretch</h3>
+
+                <div class="display-flex">
+
+                    <div class="card flex-stretch">
+                        THE SIGNATURE COLLECTION
+                    </div>
+
+                    <div class="card">SOPHEA</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Flex Center</h3>
+
+                <div class="display-flex flex-align-center flex-justify-center">
+
+                    <div class="card">SPATIAL FRAGRANCE</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             FORMS
+        ======================================== -->
+
+        <section class="container" id="forms">
+
+            <h2>Forms</h2>
+
+
+            <!-- INPUTS -->
+
+            <div id="inputs">
+
+                <h3>Inputs</h3>
+
+                <div class="card soft">
+
+                    <h4>Default Inputs</h4>
+
+                    <form>
+
+                        <input type="text" aria-label="Default text input"><br>
+
+                        <input type="number" aria-label="Default number input"><br>
+
+                        <input type="password" aria-label="Default password input"><br>
+
+                        <input type="url" aria-label="Default URL input"><br>
+
+                        <input type="email" aria-label="Default email input"><br>
+
+                        <input type="datetime-local" aria-label="Default date and time input"><br>
+
+                        <input type="date" aria-label="Default date input"><br>
+
+                        <input type="search" aria-label="Default search input">
+
+                    </form>
+
+
+                    <h4>Form Input</h4>
+
+                    <form>
+
+                        <input
+                            type="text"
+                            placeholder="Text"
+                            class="form-input"
+                            aria-label="Styled text input"
+                        >
+
+                        <input
+                            type="number"
+                            placeholder="Number"
+                            class="form-input"
+                            aria-label="Styled number input"
+                        >
+
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            class="form-input"
+                            aria-label="Styled password input"
+                        >
+
+                        <input
+                            type="search"
+                            placeholder="Search"
+                            class="form-input"
+                            aria-label="Styled search input"
+                        >
+
+                    </form>
+
+
+                    <h4>Form Label</h4>
+
+                    <form>
+
+                        <label class="form-label" for="label-text">
+                            Text
+                        </label>
+
+                        <input
+                            id="label-text"
+                            type="text"
+                            placeholder="Text"
+                            class="form-input"
+                        >
+
+
+                        <label class="form-label" for="label-number">
+                            Number
+                        </label>
+
+                        <input
+                            id="label-number"
+                            type="number"
+                            placeholder="Number"
+                            class="form-input"
+                        >
+
+
+                        <label class="form-label" for="label-password">
+                            Password
+                        </label>
+
+                        <input
+                            id="label-password"
+                            type="password"
+                            placeholder="Password"
+                            class="form-input"
+                        >
+
+
+                        <label class="form-label" for="label-search">
+                            Search
+                        </label>
+
+                        <input
+                            id="label-search"
+                            type="search"
+                            placeholder="Search"
+                            class="form-input"
+                        >
+
+                    </form>
+
+
+                    <h4>Form Control</h4>
+
+                    <form>
+
+                        <div class="form-control">
+
+                            <label class="form-label" for="control-text">
+                                Text
+                            </label>
+
+                            <input
+                                id="control-text"
+                                type="text"
+                                placeholder="Text"
+                                class="form-input"
+                            >
+
+                        </div>
+
+
+                        <div class="form-control">
+
+                            <label class="form-label" for="control-number">
+                                Number
+                            </label>
+
+                            <input
+                                id="control-number"
+                                type="number"
+                                placeholder="Number"
+                                class="form-input"
+                            >
+
+                        </div>
+
+
+                        <div class="form-control">
+
+                            <label class="form-label" for="control-password">
+                                Password
+                            </label>
+
+                            <input
+                                id="control-password"
+                                type="password"
+                                placeholder="Password"
+                                class="form-input"
+                            >
+
+                        </div>
+
+
+                        <div class="form-control">
+
+                            <label class="form-label" for="control-search">
+                                Search
+                            </label>
+
+                            <input
+                                id="control-search"
+                                type="search"
+                                placeholder="Search"
+                                class="form-input"
+                            >
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div id="buttons">
+
+                <h3>Buttons</h3>
+
+                <div class="card soft">
+
+                    <h4>Default Buttons</h4>
+
+                    <button type="button">Button</button>
+
+
+                    <h4>Form Buttons</h4>
+
+                    <div class="form-control">
+
+                        <button type="button" class="form-button">
+                            Button
+                        </button>
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <input
+                            type="button"
+                            class="form-button"
+                            value="Input"
+                        >
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <a href="#forms" class="form-button">
+                            Anchor
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HOTDOG -->
+
+            <div id="hotdog">
+
+                <h3>Hotdog</h3>
+
+                <div class="card soft">
+
+                    <div class="form-control">
+
+                        <input
+                            type="search"
+                            class="hotdog"
+                            placeholder="Search"
+                            aria-label="Rounded search field"
+                        >
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <input
+                            type="button"
+                            class="hotdog hotdog-dark"
+                            value="Search"
+                        >
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <div class="hotdog-box">
+
+                            <input
+                                type="search"
+                                class="hotdog hotdog-inner"
+                                placeholder="Search"
+                                aria-label="Search field with container"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <div class="hotdog-icon">
+
+                            <span aria-hidden="true">☰</span>
+
+                            <input
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search field with icon"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHECKBOXES -->
+
+            <div>
+
+                <h3>Checkboxes</h3>
+
+                <div class="card soft">
+
+                    <div class="form-control">
+
+                        <label class="checkbox">
+
+                            <input type="checkbox">
+
+                            <span>Subscribe to updates</span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM VARIATIONS -->
+
+            <div>
+
+                <h3>Form Variations</h3>
+
+
+                <div class="card soft">
+
+                    <h4>Basic</h4>
+
+                    <div class="form-control">
+
+                        <label class="form-label" for="basic-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="basic-email"
+                            type="email"
+                            class="form-input"
+                            placeholder="Email address"
+                        >
+
+                    </div>
+
+
+                    <div class="form-control">
+
+                        <button type="button" class="form-button">
+                            Submit
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card soft">
+
+                    <h4>Warning</h4>
+
+                    <div class="form-control form-warning">
+
+                        <label class="form-label" for="warning-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="warning-email"
+                            type="email"
+                            class="form-input"
+                            placeholder="Email address"
+                            aria-describedby="warning-message"
+                        >
+
+                        <small id="warning-message">
+                            Please enter a valid email address.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card soft">
+
+                    <h4>Alert</h4>
+
+                    <div class="form-control form-alert">
+
+                        <label class="form-label" for="alert-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="alert-email"
+                            type="email"
+                            class="form-input"
+                            placeholder="Email address"
+                            aria-describedby="alert-message"
+                        >
+
+                        <small id="alert-message">
+                            This field is required.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card soft">
+
+                    <h4>Money</h4>
+
+                    <div class="form-control form-money">
+
+                        <label class="form-label" for="price-input">
+                            Price
+                        </label>
+
+                        <div class="money-input">
+
+                            <span aria-hidden="true">$</span>
+
+                            <input
+                                id="price-input"
+                                type="number"
+                                class="form-input"
+                                placeholder="0.00"
+                                min="0"
+                                step="0.01"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card soft">
+
+                    <h4>Hero</h4>
+
+                    <div class="form-control form-hero">
+
+                        <label class="form-label" for="hero-email">
+                            Join the SOPHEA List
+                        </label>
+
+                        <input
+                            id="hero-email"
+                            type="email"
+                            class="form-input"
+                            placeholder="Email address"
+                        >
+
+                        <button type="button" class="form-button">
+                            Subscribe
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             FIGURES
+        ======================================== -->
+
+        <section class="container" id="figures">
+
+            <h2>Figures</h2>
+
+
+            <div class="card soft">
+
+                <h3>Basic Figure</h3>
+
+                <figure class="basic-figure">
+
+                    <img
+                        src="../../img/sophea-candles.jpg"
+                        alt="SOPHEA candle collection"
+                        class="media-image"
+                    >
+
+                    <figcaption>
+                        SOPHEA — The Signature Collection
+                    </figcaption>
+
+                </figure>
+
+            </div>
+
+
+            <h3>Figure Grid</h3>
+
+            <div class="figure-grid">
+
+                <figure class="grid-figure">
+
+                    <img
+                        src="../../img/sophea-current.png"
+                        alt="CURRENT candle from SOPHEA"
+                        class="media-image"
+                    >
+
+                    <figcaption>CURRENT</figcaption>
+
+                </figure>
+
+
+                <figure class="grid-figure">
+
+                    <img
+                        src="../../img/sophea-obsidian.png"
+                        alt="OBSIDIAN candle from SOPHEA"
+                        class="media-image"
+                    >
+
+                    <figcaption>OBSIDIAN</figcaption>
+
+                </figure>
+
+
+                <figure class="grid-figure">
+
+                    <img
+                        src="../../img/sophea-candles.png"
+                        alt="DUNE fragrance presentation"
+                        class="media-image"
+                    >
+
+                    <figcaption>DUNE</figcaption>
+
+                </figure>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html><section class="brand-intro">
     <p class="brand-name">SOPHEA</p>
     <h1>Digital Style Guide</h1>
     <p class="brand-tagline">
