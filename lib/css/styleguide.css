@@ -627,3 +627,26 @@ button {
     height: 220px;
     object-fit: cover;
 }
+/* SOPHEA — Separate Form Variation cards */
+
+#forms > .card.soft {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* SOPHEA — Cream background for Inputs and Buttons only */
+
+#forms > .card.soft:first-of-type {
+    background-color: #F4EFE7;
+    border: none;
+    padding: 32px;
+}
+
+/* SOPHEA — Consistent borders throughout the style guide */
+
+.card,
+.color-swatch,
+.form-hero {
+    border: 1px solid #DED6CC;
+}
