@@ -47,3 +47,497 @@ body {
         line-height:2em;
         }
     }
+   /* =====================================
+   SOPHEA — PHP COLLECTION
+   ===================================== */
+
+:root {
+    --sophea-ivory: #F7F5F1;
+    --sophea-white: #FFFFFF;
+    --sophea-charcoal: #242424;
+    --sophea-gray: #77736F;
+    --sophea-border: #DEDAD4;
+}
+
+/* GENERAL */
+
+body {
+    margin: 0;
+    background-color: var(--sophea-ivory);
+    color: var(--sophea-charcoal);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* NAVIGATION */
+
+.sophea-header {
+    background-color: var(--sophea-ivory);
+    border-bottom: 1px solid var(--sophea-border);
+}
+
+.sophea-nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sophea-logo {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: var(--sophea-charcoal);
+}
+
+.sophea-navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.sophea-navigation a {
+    text-decoration: none;
+    color: var(--sophea-charcoal);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.sophea-navigation a:hover {
+    opacity: 0.55;
+}
+
+/* MAIN PAGE */
+
+.sophea-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 40px 120px;
+}
+
+.sophea-page-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 56px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sophea-page-description {
+    text-align: center;
+    font-size: 14px;
+    color: var(--sophea-gray);
+    margin-bottom: 65px;
+}
+
+/* PRODUCT GRID */
+
+.sophea-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.sophea-product-card {
+    text-align: center;
+}
+
+.sophea-product-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+.sophea-product-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 20px 0 5px;
+}
+
+.sophea-product-description {
+    font-size: 13px;
+    color: var(--sophea-gray);
+    margin-bottom: 15px;
+}
+
+/* BUTTONS */
+
+.sophea-button {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: var(--sophea-charcoal);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--sophea-charcoal);
+    transition: 0.3s ease;
+}
+
+.sophea-button:hover {
+    background-color: transparent;
+    color: var(--sophea-charcoal);
+}
+
+/* PRODUCT DETAILS */
+
+.sophea-product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.sophea-product-detail img {
+    width: 100%;
+    display: block;
+}
+
+.sophea-product-detail h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.sophea-back-link {
+    display: inline-block;
+    margin-top: 35px;
+    color: var(--sophea-gray);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .sophea-nav-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sophea-navigation {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sophea-page {
+        padding: 50px 20px;
+    }
+
+    .sophea-page-title {
+        font-size: 38px;
+    }
+
+    .sophea-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .sophea-product-detail {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sophea-product-detail h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .sophea-product-grid {
+        grid-template-columns: 1fr;
+    }
+} 
+
+/* =========================================
+   SOPHEA — PHP HOMEPAGE
+========================================= */
+
+
+/* GLOBAL HOMEPAGE */
+
+.sophea-home-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* HERO */
+
+.sophea-home-hero {
+    width: 100%;
+}
+
+.sophea-home-hero-image {
+    min-height: 720px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.22),
+            rgba(0, 0, 0, 0.22)
+        ),
+        url("../../img/sophea-candles.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.sophea-home-hero-content {
+    max-width: 800px;
+    padding: 40px;
+    color: #FFFFFF;
+}
+
+.sophea-home-hero-content h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 78px);
+    font-weight: 400;
+    line-height: 1.1;
+
+    margin: 25px 0;
+}
+
+.sophea-home-subtitle {
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+
+    margin-bottom: 40px;
+}
+
+
+/* HERO BUTTON */
+
+.sophea-home-button {
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    border: 1px solid #FFFFFF;
+
+    color: #FFFFFF;
+    background: transparent;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.sophea-home-button:hover {
+    background: #FFFFFF;
+    color: #242424;
+}
+
+
+/* INTRODUCTION */
+
+.sophea-home-intro {
+    max-width: 800px;
+
+    margin: auto;
+    padding: 130px 25px;
+
+    text-align: center;
+}
+
+.sophea-home-intro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+
+    margin: 25px 0;
+}
+
+.sophea-home-intro > p:last-child {
+    max-width: 600px;
+    margin: auto;
+
+    font-size: 15px;
+    line-height: 2;
+
+    color: #777777;
+}
+
+
+/* FEATURED COLLECTION */
+
+.sophea-home-collection {
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 80px 40px 130px;
+}
+
+.sophea-home-section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.sophea-home-section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: 400;
+
+    margin: 20px 0;
+}
+
+.sophea-home-section-heading > p:last-child {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* VIEW ALL */
+
+.sophea-home-view-all {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.sophea-home-text-link {
+    color: #242424;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #242424;
+    padding-bottom: 8px;
+}
+
+.sophea-home-text-link:hover {
+    opacity: 0.55;
+}
+
+
+/* BRAND MESSAGE */
+
+.sophea-home-message {
+    background-color: #EDEAE5;
+
+    padding: 140px 25px;
+
+    text-align: center;
+}
+
+.sophea-home-message-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.sophea-home-message h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.3;
+
+    margin: 25px 0;
+}
+
+.sophea-home-message-content > p:last-child {
+    font-size: 15px;
+    color: #777777;
+    line-height: 1.8;
+}
+
+
+/* FOOTER */
+
+.sophea-home-footer {
+    background-color: #242424;
+    color: #FFFFFF;
+
+    padding: 90px 25px 40px;
+
+    text-align: center;
+}
+
+.sophea-home-footer h2 {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+.sophea-home-footer p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.sophea-home-footer a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #FFFFFF;
+
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.sophea-home-footer a:hover {
+    opacity: 0.6;
+}
+
+.sophea-home-copyright {
+    margin-top: 65px;
+
+    font-size: 11px !important;
+    opacity: 0.5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .sophea-home-hero-image {
+        min-height: 550px;
+    }
+
+    .sophea-home-hero-content {
+        padding: 25px;
+    }
+
+    .sophea-home-intro {
+        padding: 90px 25px;
+    }
+
+    .sophea-home-collection {
+        padding: 60px 20px 90px;
+    }
+
+    .sophea-home-section-heading h2 {
+        font-size: 38px;
+    }
+
+    .sophea-home-message {
+        padding: 90px 25px;
+    }
+
+}
