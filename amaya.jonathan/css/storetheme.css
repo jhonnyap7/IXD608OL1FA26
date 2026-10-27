@@ -1,7 +1,7 @@
 
 
 .navbar {
-    background-color: #1f1f1f;
+   background-color: #242424;
 }
 
 .navbar h1 {
@@ -21,10 +21,11 @@
 
 .card.soft {
     box-shadow: none;
+    background-color: #F7F5F1;
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #EDEAE5;
 }
 
 
@@ -541,3 +542,99 @@ body {
     }
 
 }
+
+
+
+
+/* =====================================
+   SOPHEA — USER EDITOR
+===================================== */
+
+.sophea-user-editor {
+    max-width: 650px;
+    margin: 50px auto 80px;
+    padding: 45px;
+    background-color: #FFFFFF;
+    border: 1px solid #DEDAD4;
+}
+
+.sophea-user-editor h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #242424;
+    margin: 0 0 35px;
+}
+
+.sophea-user-editor .form-control {
+    margin-bottom: 25px;
+}
+
+.sophea-user-editor label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #77736F;
+}
+
+.sophea-user-editor input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #DEDAD4;
+    border-radius: 0;
+    background-color: #F7F5F1;
+    color: #242424;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.sophea-user-editor input:focus {
+    outline: 1px solid #242424;
+}
+
+.sophea-user-editor .sophea-button {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .sophea-user-editor {
+        margin: 30px auto 50px;
+        padding: 25px;
+    }
+
+    .sophea-user-editor h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* SOPHEA — USER DIRECTORY HEADING */
+
+.card.soft h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #242424;
+    margin-bottom: 25px;
+}
+
+
+/* SOPHEA — USER DIRECTORY SPACING */
+
+.card.soft a {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #242424;
+    border-bottom: 1px solid #DEDAD4;
+}
+
+.card.soft a:hover {
+    color: #77736F;
+}
+
