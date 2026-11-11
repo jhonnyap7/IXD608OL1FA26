@@ -1,44 +1,109 @@
 <?php
 
 // =====================================
-// SOPHEA PRODUCT COLLECTION
+// SOPHEA — PRODUCT COLLECTION
 // =====================================
 
-$products = [
-    [
-        "id" => 1,
-        "name" => "CURRENT",
-        "description" => "White Tea",
-        "image" => "img/sophea-current.png"
-    ],
-    [
-        "id" => 2,
-        "name" => "OBSIDIAN",
-        "description" => "Black Sea",
-        "image" => "img/sophea-obsidian.png"
-    ],
-    [
-        "id" => 3,
-        "name" => "DUNE",
-        "description" => "White Orris & Sandalwood",
-        "image" => "img/sophea-dune.jpg"
-    ]
+require_once __DIR__ . '/php/functions.php';
+require_once __DIR__ . '/parts/templates.php';
+
+// =====================================
+// RETRIEVE PRODUCTS FROM MYSQL
+// =====================================
+
+$products = [];
+$databaseError = false;
+
+try {
+
+    $conn = makeConn();
+
+    $result = makeQuery(
+        $conn,
+        "SELECT id, name, description, price,
+                category, scent, size, image
+         FROM products
+         ORDER BY id ASC"
+    );
+
+    $products = $result->fetch_all(MYSQLI_ASSOC);
+
+    $conn->close();
+
+} catch (Throwable $e) {
+
+    // Do not expose database information to visitors.
+    error_log('SOPHEA product query failed: ' . $e->getMessage());
+
+    $databaseError = true;
+}
+
+// =====================================
+// SOPHEA PRODUCT IMAGE MAPPING
+// =====================================
+
+// These paths are relative to IXD608OL1FA26/.
+
+$productImages = [
+    'current'  => 'img/store/sophea-current.png',
+    'obsidian' => 'img/store/sophea-obsidian.png',
+    'dune'     => 'img/store/sophea-dune.jpg',
+    'verdant'  => 'img/store/sophea-verdant.jpg',
+    'still'    => 'img/store/sophea-still.jpg',
+    'vapor'    => 'img/store/sophea-vapor.jpg'
 ];
+
+// Image used when a product has no matching photograph.
+$fallbackImage = 'img/store/sophea-candles.png';
+
+// =====================================
+// PREPARE PRODUCT DATA
+// =====================================
+
+foreach ($products as &$product) {
+
+    // Normalize the product name for image matching.
+    $productName = strtolower(
+        trim($product['name'])
+    );
+
+    // Remove an optional SOPHEA prefix.
+    $productName = preg_replace(
+        '/^sophea\s+/',
+        '',
+        $productName
+    );
+
+    // Use the database image when available.
+    if (empty($product['image'])) {
+
+        // Otherwise, use the mapped image or fallback.
+        $product['image'] =
+            $productImages[$productName]
+            ?? $fallbackImage;
+    }
+}
+
+unset($product);
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <title>SOPHEA | The Collection</title>
 
-    <?php include "parts/meta.php"; ?>
+    <?php include __DIR__ . '/parts/meta.php'; ?>
+
 </head>
 
 <body>
 
-    <?php include "parts/navbar.php"; ?>
+    <?php include __DIR__ . '/parts/navbar.php'; ?>
 
     <main class="sophea-page">
 
@@ -50,39 +115,40 @@ $products = [
             Thoughtfully crafted fragrances for moments of stillness.
         </p>
 
-        <div class="sophea-product-grid">
+        <?php if ($databaseError): ?>
 
-            <?php foreach ($products as $product): ?>
+            <p class="sophea-page-description">
+                Our collection is temporarily unavailable.
+                Please try again later.
+            </p>
 
-                <article class="sophea-product-card">
+        <?php elseif (empty($products)): ?>
 
-                    <img
-                        src="<?= htmlspecialchars($product['image'], ENT_QUOTES, 'UTF-8') ?>"
-                        alt="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?> candle"
-                    >
+            <p class="sophea-page-description">
+                No products are currently available.
+            </p>
 
-                    <h2 class="sophea-product-name">
-                        <?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>
-                    </h2>
+        <?php else: ?>
 
-                    <p class="sophea-product-description">
-                        <?= htmlspecialchars($product['description'], ENT_QUOTES, 'UTF-8') ?>
-                    </p>
+            <div class="sophea-product-grid">
 
-                    <a
-                        href="product_item.php?id=<?= (int) $product['id'] ?>"
-                        class="sophea-button"
-                    >
-                        Discover
-                    </a>
+                <?php foreach ($products as $product): ?>
 
-                </article>
+                    <?php
+                    // The reusable template expects an object.
+                    $item = (object) $product;
 
-            <?php endforeach; ?>
+                    echo productListTemplate($item);
+                    ?>
 
-        </div>
+                <?php endforeach; ?>
+
+            </div>
+
+        <?php endif; ?>
 
     </main>
 
 </body>
+
 </html>

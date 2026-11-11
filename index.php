@@ -1,28 +1,28 @@
 <?php
 
 // ======================================
-// SOPHEA — HOMEPAGE
+// SOPHEA - HOMEPAGE
 // ======================================
 
 // Featured candles
 $featuredProducts = [
     [
-        "id" => 1,
+        "id" => 3,
         "name" => "CURRENT",
         "description" => "White Tea",
-        "image" => "img/sophea-current.png"
+        "image" => "img/store/sophea-current.png"
+    ],
+    [
+        "id" => 1,
+        "name" => "OBSIDIAN",
+        "description" => "Black Sea",
+        "image" => "img/store/sophea-obsidian.png"
     ],
     [
         "id" => 2,
-        "name" => "OBSIDIAN",
-        "description" => "Black Sea",
-        "image" => "img/sophea-obsidian.png"
-    ],
-    [
-        "id" => 3,
         "name" => "DUNE",
         "description" => "White Orris & Sandalwood",
-        "image" => "img/sophea-dune.jpg"
+        "image" => "img/store/sophea-dune.jpg"
     ]
 ];
 
@@ -210,6 +210,21 @@ $featuredProducts = [
         </div>
 
     </section>
+
+<!-- SOPHEA LIFESTYLE BANNER -->
+<section class="sophea-lifestyle-banner">
+    <div class="sophea-lifestyle-content">
+        <p class="sophea-home-label">THE ART OF LIVING</p>
+
+        <h2>Beauty in the Everyday.</h2>
+
+        <p>
+            Creating space for stillness,
+            intention, and meaningful moments.
+        </p>
+    </div>
+</section>
+
 
 
     <!-- FOOTER -->

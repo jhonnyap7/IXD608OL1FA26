@@ -61,7 +61,7 @@ if (
                     throw new RuntimeException('Unable to save user data.');
                 }
 
-                header('Location: users.php?id=' . $id, true, 303);
+                header('Location: /IXD608OL1FA26/amaya.jonathan/admin/users.php?id=' . $id, true, 303);
                 exit;
 
         case 'create':
@@ -89,7 +89,7 @@ if (
                     throw new RuntimeException('Unable to save user data.');
                 }
 
-                header('Location: users.php?id=' . $id, true, 303);
+                header('Location: /IXD608OL1FA26/amaya.jonathan/admin/users.php?id=' . $id, true, 303);
                 exit;
                             case 'delete':
 
@@ -104,7 +104,7 @@ if (
                     throw new RuntimeException('Unable to save user data.');
                 }
 
-                header('Location: users.php', true, 303);
+                header('Location: /IXD608OL1FA26/amaya.jonathan/admin/users.php', true, 303);
                 exit;
     }
 }
@@ -139,7 +139,7 @@ function showUserPage($user, $id) {
 
         <h2>$title</h2>
 
-    <form method="post" action="users.php?id=$id&action=$action">
+    <form method="post" action="/IXD608OL1FA26/amaya.jonathan/admin/users.php?id=$id&action=$action">
         <div class="form-grid">
             <div class="form-control">
                 <label for="user-name">Name</label>
@@ -173,7 +173,7 @@ HTML;
 if ($id !== 'new') {
     echo <<<HTML
         <form method="post"
-              action="users.php?id=$id&action=delete"
+              action="/IXD608OL1FA26/amaya.jonathan/admin/users.php?id=$id&action=delete"
               onsubmit="return confirm('Are you sure you want to delete this user?');">
 
             <button type="submit" class="sophea-button">
@@ -258,7 +258,7 @@ HTML;
 
         ?>
         <h2>Sophea User Directory</h2>
-        <a href="users.php?id=new" class="sophea-button">
+        <a href="/IXD608OL1FA26/amaya.jonathan/admin/users.php?id=new" class="sophea-button">
             + Create New User
         </a>
 
@@ -275,7 +275,7 @@ HTML;
     );
 
     echo "<li>
-        <a href='users.php?id=$i'>$name</a>
+        <a href='/IXD608OL1FA26/amaya.jonathan/admin/users.php?id=$i'>$name</a>
     </li>";
 }
 

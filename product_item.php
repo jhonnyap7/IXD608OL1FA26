@@ -1,35 +1,13 @@
 <?php
 
 // =====================================
-// SOPHEA PRODUCT INFORMATION
+// SOPHEA — PRODUCT DETAIL PAGE
 // =====================================
 
-$products = [
-
-    1 => [
-        "name" => "CURRENT",
-        "description" => "White Tea",
-        "image" => "img/sophea-current.png",
-        "story" => "A gentle expression of clarity and calm."
-    ],
-
-    2 => [
-        "name" => "OBSIDIAN",
-        "description" => "Black Sea",
-        "image" => "img/sophea-obsidian.png",
-        "story" => "A deeper, atmospheric fragrance inspired by quiet moments."
-    ],
-
-    3 => [
-        "name" => "DUNE",
-        "description" => "White Orris & Sandalwood",
-        "image" => "img/sophea-dune.jpg",
-        "story" => "A warm, refined fragrance inspired by stillness and simplicity."
-    ]
-];
+require_once __DIR__ . '/php/functions.php';
 
 // =====================================
-// GET PRODUCT ID FROM URL
+// GET PRODUCT ID
 // =====================================
 
 $id = filter_input(
@@ -38,9 +16,109 @@ $id = filter_input(
     FILTER_VALIDATE_INT
 );
 
-// Find selected product
+$product = null;
+$databaseError = false;
 
-$product = $products[$id] ?? null;
+// =====================================
+// GET PRODUCT FROM MYSQL
+// =====================================
+
+if ($id && $id > 0) {
+
+    try {
+
+        $conn = makeConn();
+
+        $stmt = $conn->prepare(
+            "SELECT id, name, description, price,
+                    category, scent, size, image
+             FROM products
+             WHERE id = ?
+             LIMIT 1"
+        );
+
+        if (!$stmt) {
+            throw new RuntimeException(
+                'Unable to prepare product query.'
+            );
+        }
+
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        $product = $result->fetch_assoc();
+
+        $stmt->close();
+        $conn->close();
+
+    } catch (Throwable $e) {
+
+        error_log(
+            'SOPHEA product detail error: ' .
+            $e->getMessage()
+        );
+
+        $databaseError = true;
+    }
+}
+
+// =====================================
+// PRODUCT IMAGE MAPPING
+// =====================================
+
+$productImages = [
+    'current'  => 'img/store/sophea-current.png',
+    'obsidian' => 'img/store/sophea-obsidian.png',
+    'dune'     => 'img/store/sophea-dune.jpg',
+    'verdant'  => 'img/store/sophea-verdant.jpg',
+    'still'    => 'img/store/sophea-still.jpg',
+    'vapor'    => 'img/store/sophea-vapor.jpg'
+];
+
+$fallbackImage = 'img/store/sophea-candles.png';
+
+$image = $fallbackImage;
+
+// =====================================
+// PREPARE PRODUCT IMAGE
+// =====================================
+
+if ($product) {
+
+    $productName = strtolower(
+        trim($product['name'])
+    );
+
+    $productName = preg_replace(
+        '/^sophea\s+/',
+        '',
+        $productName
+    );
+
+    if (!empty($product['image'])) {
+
+        $image = $product['image'];
+
+    } else {
+
+        $image = $productImages[$productName]
+            ?? $fallbackImage;
+    }
+}
+
+// =====================================
+// ESCAPE HTML
+// =====================================
+
+function escapeProduct($value) {
+
+    return htmlspecialchars(
+        (string) $value,
+        ENT_QUOTES,
+        'UTF-8'
+    );
+}
 
 ?>
 
@@ -51,47 +129,86 @@ $product = $products[$id] ?? null;
 
     <meta charset="UTF-8">
 
-    <title>SOPHEA | Product Details</title>
+    <title>
+        <?= $product
+            ? 'SOPHEA | ' . escapeProduct($product['name'])
+            : 'SOPHEA | Product'
+        ?>
+    </title>
 
-    <?php include "parts/meta.php"; ?>
+    <?php include __DIR__ . '/parts/meta.php'; ?>
 
 </head>
 
 <body>
 
-    <?php include "parts/navbar.php"; ?>
+    <?php include __DIR__ . '/parts/navbar.php'; ?>
 
     <main class="sophea-page">
 
-        <?php if ($product): ?>
+        <?php if ($databaseError): ?>
+
+            <h1 class="sophea-page-title">
+                Collection Unavailable
+            </h1>
+
+            <p class="sophea-page-description">
+                We could not load this product.
+                Please try again later.
+            </p>
+
+        <?php elseif ($product): ?>
 
             <div class="sophea-product-detail">
 
-                <div>
+                <!-- PRODUCT IMAGE -->
+
+                <div class="sophea-product-gallery">
 
                     <img
-                        src="<?= htmlspecialchars($product['image']) ?>"
-                        alt="<?= htmlspecialchars($product['name']) ?> candle"
+                        src="<?= escapeProduct($image) ?>"
+                        alt="<?= escapeProduct($product['name']) ?> candle"
+                        class="sophea-main-product-image"
                     >
 
                 </div>
 
-                <div>
+                <!-- PRODUCT INFORMATION -->
+
+                <div class="sophea-product-information">
 
                     <p class="sophea-product-description">
-                        THE COLLECTION
+                        THE SOPHEA COLLECTION
                     </p>
 
                     <h1>
-                        <?= htmlspecialchars($product['name']) ?>
+                        <?= escapeProduct($product['name']) ?>
                     </h1>
 
-                    <p>
-                        <?= htmlspecialchars($product['description']) ?>
+                    <p class="sophea-product-description">
+                        <?= escapeProduct($product['scent']) ?>
                     </p>
 
+                    <h2 class="sophea-product-price">
+                        $<?= number_format(
+                            (float) $product['price'],
+                            2
+                        ) ?>
+                    </h2>
+
                     <p>
-                        <?= htmlspecialchars($product['story']) ?>
+                        <?= escapeProduct($product['description']) ?>
+                    </p>
+
+                    <p class="sophea-product-size">
+                        Size:
+                        <?= escapeProduct($product['size']) ?>
+                    </p>
+
+                    <p class="sophea-product-description">
+                        <?= escapeProduct(
+                            ucfirst($product['category'])
+                        ) ?>
                     </p>
 
                     <a
@@ -112,19 +229,15 @@ $product = $products[$id] ?? null;
             </h1>
 
             <p class="sophea-page-description">
-                Please select a valid product.
+                This product could not be found.
             </p>
 
-            <div style="text-align: center;">
-
-                <a
-                    href="product_list.php"
-                    class="sophea-button"
-                >
-                    View Collection
-                </a>
-
-            </div>
+            <a
+                href="product_list.php"
+                class="sophea-button"
+            >
+                View Collection
+            </a>
 
         <?php endif; ?>
 

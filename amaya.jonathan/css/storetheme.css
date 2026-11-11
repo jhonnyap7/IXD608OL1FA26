@@ -53,11 +53,12 @@ body {
    ===================================== */
 
 :root {
-    --sophea-ivory: #F7F5F1;
+    --sophea-ivory: #F4EFE7;
     --sophea-white: #FFFFFF;
-    --sophea-charcoal: #242424;
+    --sophea-charcoal: #24211D;
     --sophea-gray: #77736F;
     --sophea-border: #DEDAD4;
+    --sophea-brown: #78604C;
 }
 
 /* GENERAL */
@@ -73,8 +74,15 @@ body {
 /* NAVIGATION */
 
 .sophea-header {
-    background-color: var(--sophea-ivory);
-    border-bottom: 1px solid var(--sophea-border);
+    background-color: var(--sophea-charcoal);
+    border-bottom: 1px solid var(--sophea-charcoal);
+}
+.sophea-header a,
+.sophea-header a:visited,
+.sophea-header a:hover,
+.sophea-header .sophea-logo,
+.sophea-header .sophea-nav a {
+    color: #F4EFE7;
 }
 
 .sophea-nav-container {
@@ -287,27 +295,30 @@ body {
 .sophea-home-hero-image {
     min-height: 720px;
 
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.22),
-            rgba(0, 0, 0, 0.22)
+background-image:
+linear-gradient(
+rgba(0, 0, 0, 0.25),
+rgba(0, 0, 0, 0.25)
         ),
-        url("../../img/sophea-candles.png");
+url("/IXD608OL1FA26/img/store/hero banner.png");
 
     background-size: cover;
     background-position: center;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
-    text-align: center;
+    text-align: left;
 }
 
 .sophea-home-hero-content {
-    max-width: 800px;
+    max-width: 480px;
     padding: 40px;
     color: #FFFFFF;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 5%;
 }
 
 .sophea-home-hero-content h1 {
@@ -637,4 +648,169 @@ body {
 .card.soft a:hover {
     color: #77736F;
 }
+
+
+
+/* =====================================
+   SOPHEA — PRODUCT DETAIL REFINEMENTS
+===================================== */
+
+.sophea-product-information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sophea-product-information h1 {
+    margin: 10px 0 15px;
+}
+
+.sophea-product-information .sophea-product-price {
+    font-size: 22px;
+    margin: 15px 0 25px;
+}
+
+.sophea-product-information > p {
+    line-height: 1.8;
+}
+
+.sophea-product-category {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--sophea-gray);
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   SOPHEA — LIFESTYLE BANNER
+===================================== */
+
+.sophea-lifestyle-banner {
+    min-height: 650px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.05),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("/IXD608OL1FA26/img/store/bottom banner.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px 25px;
+    box-sizing: border-box;
+}
+
+.sophea-lifestyle-content {
+    max-width: 750px;
+    padding: 30px 45px;
+    background: transparent;
+    color: #FFFFFF;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.sophea-lifestyle-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin: 20px 0;
+}
+
+.sophea-lifestyle-content p {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .sophea-lifestyle-banner {
+        min-height: 400px;
+        padding: 40px 20px;
+    }
+
+    .sophea-lifestyle-content {
+        padding: 25px;
+    }
+}
+
+/* SOPHEA — MOBILE HERO ALIGNMENT */
+
+@media (max-width: 768px) {
+    .sophea-home-hero-image {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sophea-home-hero-content {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 25px;
+        text-align: center;
+    }
+}
+
+
+
+
+/* SOPHEA — COMING SOON PRODUCTS */
+
+.sophea-coming-soon-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: #E8E2D9;
+    border: 1px solid #DEDAD4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.sophea-coming-soon-image span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    color: #78604C;
+}
+
+.sophea-coming-soon-image h3 {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 30px 0 15px;
+    color: #24211D;
+}
+
+.sophea-coming-soon-image p {
+    font-size: 12px;
+    color: #77736F;
+}
+
+.sophea-coming-soon-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 28px;
+    border: 1px solid #B9B0A5;
+    color: #77736F;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+
+
 
