@@ -35,12 +35,9 @@ function productListTemplate($product) {
     );
 
     $comingSoonNames = [
-        'holiday',
-        'solace',
-        'terra',
-        'noir',
-        'lumen',
-        'serein'
+    'noir',
+    'lumen',
+    'serein'
     ];
 
     $normalizedName = strtolower(trim(

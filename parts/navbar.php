@@ -16,6 +16,8 @@
 
             <a href="index.php#contact">Contact</a>
 
+            <a href="cart.php">Bag</a>
+
         </nav>
 
     </div>
