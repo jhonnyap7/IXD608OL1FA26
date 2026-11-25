@@ -812,5 +812,143 @@ url("/IXD608OL1FA26/img/store/hero banner.png");
 }
 
 
+/* =========================================
+   SOPHEA — RESPONSIVE COLLECTION CONTROLS
+   IXD 608 — SEARCH, FILTER & SORT
+========================================= */
 
+.sophea-collection-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 40px auto 25px;
+}
+
+.sophea-tool-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    flex: 1 1 180px;
+    min-width: 0;
+}
+
+.sophea-tool-search {
+    flex: 2 1 260px;
+}
+
+.sophea-tool-field label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #24211D;
+}
+
+.sophea-tool-field input,
+.sophea-tool-field select {
+    width: 100%;
+    min-height: 46px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #D5C2AA;
+    border-radius: 0;
+
+    background-color: #F4EFE7;
+    color: #24211D;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.sophea-tool-field input:focus,
+.sophea-tool-field select:focus {
+    outline: 2px solid #78604C;
+    outline-offset: 2px;
+}
+
+.sophea-collection-tools .sophea-button {
+    min-height: 46px;
+    padding: 12px 28px;
+    cursor: pointer;
+}
+
+.sophea-reset-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #78604C;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.sophea-results-count {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #78604C;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .sophea-collection-tools {
+        gap: 16px;
+    }
+
+    .sophea-tool-field {
+        flex: 1 1 45%;
+    }
+
+    .sophea-tool-search {
+        flex: 1 1 100%;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .sophea-collection-tools {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+
+        margin-top: 30px;
+    }
+
+    .sophea-tool-field,
+    .sophea-tool-search {
+        flex: none;
+        width: 100%;
+    }
+
+    .sophea-collection-tools .sophea-button,
+    .sophea-reset-link {
+        width: 100%;
+    }
+
+    .sophea-results-count {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
 
